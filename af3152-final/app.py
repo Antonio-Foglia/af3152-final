@@ -6,7 +6,8 @@ Created on Tue Apr 21 14:57:17 2020
 """
 
 #import statements
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from F1_standings import f1
 
 #Flask app variable
 app = Flask(__name__)
@@ -24,6 +25,23 @@ def tenosix():
 @app.route("/sport")
 def sports():
     return render_template("sport.html")
+
+
+@app.route("/F1", methods=["GET", "POST"])
+def year():
+    if request.method == "GET":
+       return render_template("year.html")
+        
+    elif request.method == "POST":
+        year = request.form["year"]
+        f1(year)
+        return render_template("F1_years/F1_{}.html".format(year))
+    
+    
+    
+    
+
+
     
 
 #start the server
