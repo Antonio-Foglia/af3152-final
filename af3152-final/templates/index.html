@@ -5,7 +5,24 @@
         <title>Home</title>
     <head>
     <body>
-    <p> Hello world! <p>
+    <div style = "position:relative; left:575px;">
+    <font size="+2"><p><b>Welcome to af3152's homepage!</b></p></font>
+    </div>
+    <br>
+    <p><b>Hello!</b> My name is Antonio Foglia and I love cats and steak...<p>
+    <p>Here is a picture of my cats:
+    <br>
+    <img src="static/images/dogs.jpeg" alt="Antonio's cats" width="20%" height="auto">
+    <br>
+    And here is a steak I cooked during quarantine:
+    <br>
+    <img src="{{url_for('static', filename='images/steak.jpeg')}}"  width="20%" height="auto"/>
+    </p>
+    <p> I am currently a freshman and my intended major is <a href="https://apam.columbia.edu/applied-mathematics-undergraduate-program">Applied Math</a>
+     with a possible minor in <a href="https://www.cs.columbia.edu/education/undergraduate/">CS</a>.
+     </p>
+     <p> Finally, click <a href="https://canigivemycat.com/steak">here</a> to see my favourite website.
+     </p>
     </body>
     
 </html>
