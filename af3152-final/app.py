@@ -17,9 +17,9 @@ def hello():
     #return "Hello world!"
     return render_template("index.html")
 
-@app.route("/1006")
+@app.route("/cat")
 def tenosix():
-    return render_template("tenosix.html")
+    return render_template("cat_names.html")
 
 @app.route("/sport")
 def sports():
