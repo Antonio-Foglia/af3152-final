@@ -21,6 +21,11 @@ def hello():
 def tenosix():
     return render_template("tenosix.html")
 
+@app.route("/sport")
+def sports():
+    return render_template("sport.html")
+    
+
 #start the server
 if __name__ == "__main__":
     app.run()
