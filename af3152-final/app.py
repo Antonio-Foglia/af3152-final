@@ -8,6 +8,7 @@ Created on Tue Apr 21 14:57:17 2020
 #import statements
 from flask import Flask, render_template, request
 from F1_standings import f1
+import os
 
 #Flask app variable
 app = Flask(__name__)
@@ -35,7 +36,7 @@ def year():
     elif request.method == "POST":
         year = request.form["year"]
         f1(year)
-        return render_template("F1_years/F1_{}.html".format(year))
+        return render_template("F1_years/F1_{}.html".format(year)),os.remove("templates/F1_years/F1_{}.html".format(year))
     
     
     
